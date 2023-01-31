@@ -1,0 +1,20 @@
+{
+  "name": "eslint-plugin-smile-js-example",
+  "version": "0.0.1",
+  "description": "Smile ESLint js example",
+  "scripts": {
+    "eslint": "eslint ."
+  },
+  "author": {
+    "name": "Tony Cabaye",
+    "email": "tonai59+github@gmail.com",
+    "url": "https://github.com/tonai"
+  },
+  "license": "GPL",
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "eslint": "^8.33.0"
+  }
+}
