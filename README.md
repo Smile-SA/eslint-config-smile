@@ -20,7 +20,7 @@ Then extend the recommended eslint config:
 {
   "extends": [
     // ...
-    "smile/recommended"
+    "plugin:smile/recommended"
   ]
 }
 ```
@@ -31,9 +31,9 @@ You can override some rules in the rule section:
 
 ```js
 {
-  "plugins": [
+  "extends": [
     // ...
-    "smile/recommended"
+    "plugin:smile/recommended"
   ],
   "rules": {
     "no-underscore-dangle": ["error", { allow: ["__schema"] }],

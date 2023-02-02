@@ -1,4 +1,19 @@
 {
   "private": true,
-  "workspaces": ["examples/*", "packages/*"]
+  "workspaces": [
+    "examples/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w packages/eslint-plugin-smile",
+    "eslint": "npm run eslint -w packages/eslint-plugin-smile",
+    "eslint:all": "npm run eslint -ws",
+    "eslint:js": "npm run eslint -w examples/js",
+    "eslint:nextjs": "npm run eslint -w examples/next-js",
+    "eslint:reactjs": "npm run eslint -w examples/react-js",
+    "eslint:vuejs": "npm run eslint -w examples/vue-js"
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0"
+  }
 }
