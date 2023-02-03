@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['plugin:smile/next'],
+  extends: ["plugin:smile/vue-ts"],
   root: true,
 };

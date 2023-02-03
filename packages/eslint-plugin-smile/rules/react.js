@@ -50,7 +50,7 @@ const reactRules = {
   'react/jsx-filename-extension': ['error', { extensions: ['.js', '.tsx'] }],
   'react/jsx-first-prop-new-line': 'error', // formatting
   'react/jsx-fragments': ['error', 'syntax'],
-  'react/jsx-handler-names': 'error',
+  'react/jsx-handler-names': ['error', { checkLocalVariables: true }],
   // 'react/jsx-indent': 'error', // formatting - useless when prettier is enabled
   // 'react/jsx-indent-props': 'error', // formatting - useless when prettier is enabled
   'react/jsx-key': ['error', { warnOnDuplicates: true }],

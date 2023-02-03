@@ -10,8 +10,12 @@
     "eslint:all": "npm run eslint -ws",
     "eslint:js": "npm run eslint -w examples/js",
     "eslint:nextjs": "npm run eslint -w examples/next-js",
+    "eslint:nextts": "npm run eslint -w examples/next-ts",
     "eslint:reactjs": "npm run eslint -w examples/react-js",
-    "eslint:vuejs": "npm run eslint -w examples/vue-js"
+    "eslint:reactts": "npm run eslint -w examples/react-ts",
+    "eslint:ts": "npm run eslint -w examples/ts",
+    "eslint:vuejs": "npm run eslint -w examples/vue-js",
+    "eslint:vuets": "npm run eslint -w examples/vue-ts"
   },
   "devDependencies": {
     "eslint": "^8.33.0"

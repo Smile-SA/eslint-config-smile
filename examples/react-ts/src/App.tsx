@@ -2,13 +2,13 @@ import './App.css';
 import MyComp from './Button';
 import logo from './logo.svg';
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
         <img alt="logo" className="App-logo" src={logo} />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
           className="App-link"

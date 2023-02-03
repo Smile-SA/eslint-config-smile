@@ -1,6 +1,7 @@
 import jsRules from './rules/js';
 import nextRules from './rules/next';
 import reactRules from './rules/react';
+import tsRules from './rules/ts';
 import vueRules from './rules/vue';
 
 const env = {
@@ -11,9 +12,31 @@ const env = {
 };
 
 const parserOptions = {
+  ecmaFeatures: {
+    jsx: true,
+  },
   ecmaVersion: 'latest',
   sourceType: 'module',
+  warnOnUnsupportedTypeScriptVersion: true,
 };
+
+const vueParserOptions = {
+  ecmaFeatures: {
+    jsx: true,
+  },
+  ecmaVersion: 'latest',
+  extraFileExtensions: ['.vue'],
+  parser: {
+    js: 'espree',
+    jsx: 'espree',
+    ts: require.resolve('@typescript-eslint/parser'),
+    tsx: require.resolve('@typescript-eslint/parser'),
+  },
+  sourceType: 'module',
+  warnOnUnsupportedTypeScriptVersion: true,
+};
+
+const extensions = ['.js', '.jsx', '.mjs', '.cjs', '.vue'];
 
 export const configs = {
   js: {
@@ -23,9 +46,36 @@ export const configs = {
       'eslint:recommended',
       'plugin:prettier/recommended',
     ],
+    overrides: [
+      {
+        extends: [
+          'plugin:prettier/recommended',
+          'plugin:@typescript-eslint/recommended',
+        ],
+        files: ['*.ts?(x)'],
+        parser: '@typescript-eslint/parser',
+        parserOptions,
+        plugins: ['@typescript-eslint'],
+        rules: tsRules,
+        settings: {
+          'import/resolver': {
+            node: {
+              extensions: extensions.concat(['.ts', '.tsx']),
+            },
+          },
+        },
+      },
+    ],
     parserOptions,
     plugins: ['import'],
     rules: jsRules,
+    settings: {
+      'import/resolver': {
+        node: {
+          extensions,
+        },
+      },
+    },
   },
   next: {
     extends: [
@@ -48,12 +98,7 @@ export const configs = {
       'plugin:jsx-a11y/recommended',
       'plugin:prettier/recommended',
     ],
-    parserOptions: {
-      ...parserOptions,
-      ecmaFeatures: {
-        jsx: true,
-      },
-    },
+    parserOptions,
     plugins: ['jsx-a11y', 'react', 'react-hooks'],
     rules: reactRules,
   },
@@ -65,6 +110,36 @@ export const configs = {
       'plugin:prettier/recommended',
     ],
     parserOptions,
+    plugins: ['vue'],
+    rules: vueRules,
+  },
+  'vue-ts': {
+    env,
+    extends: [
+      '@vue/eslint-config-typescript',
+      'plugin:smile/js',
+      'plugin:vue/vue3-essential',
+      'plugin:prettier/recommended',
+    ],
+    overrides: [
+      {
+        extends: [
+          'plugin:prettier/recommended',
+          'plugin:@typescript-eslint/recommended',
+        ],
+        files: ['*.ts', '*.tsx', '*.vue'],
+        parser: 'vue-eslint-parser',
+        parserOptions: vueParserOptions,
+        plugins: ['@typescript-eslint'],
+        rules: {
+          ...tsRules,
+          // following rules does not work without type informations in vue
+          '@typescript-eslint/naming-convention': 'off',
+          '@typescript-eslint/prefer-optional-chain': 'off',
+        },
+      },
+    ],
+    parserOptions: vueParserOptions,
     plugins: ['vue'],
     rules: vueRules,
   },
