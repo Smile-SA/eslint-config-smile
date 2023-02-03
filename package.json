@@ -9,13 +9,13 @@
     "eslint": "npm run eslint -w packages/eslint-plugin-smile",
     "eslint:all": "npm run eslint -ws",
     "eslint:js": "npm run eslint -w examples/js",
-    "eslint:nextjs": "npm run eslint -w examples/next-js",
-    "eslint:nextts": "npm run eslint -w examples/next-ts",
-    "eslint:reactjs": "npm run eslint -w examples/react-js",
-    "eslint:reactts": "npm run eslint -w examples/react-ts",
+    "eslint:next-js": "npm run eslint -w examples/next-js",
+    "eslint:next-ts": "npm run eslint -w examples/next-ts",
+    "eslint:react-js": "npm run eslint -w examples/react-js",
+    "eslint:react-ts": "npm run eslint -w examples/react-ts",
     "eslint:ts": "npm run eslint -w examples/ts",
-    "eslint:vuejs": "npm run eslint -w examples/vue-js",
-    "eslint:vuets": "npm run eslint -w examples/vue-ts"
+    "eslint:vue-js": "npm run eslint -w examples/vue-js",
+    "eslint:vue-ts": "npm run eslint -w examples/vue-ts"
   },
   "devDependencies": {
     "eslint": "^8.33.0"

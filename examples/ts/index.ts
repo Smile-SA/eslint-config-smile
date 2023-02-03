@@ -1,8 +1,8 @@
-interface Foo {
+interface IFoo {
   foo?: string;
 }
 
-function run(foo?: Foo, bar?: number): void {
+function run(foo?: IFoo, bar?: number): void {
   if (bar === 42) {
     console.log(`Hello world`);
   }

@@ -6,7 +6,7 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
-        <img alt="logo" className="App-logo" src={logo} />
+        <img alt="logo" className="App-logo" src={logo as string} />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>

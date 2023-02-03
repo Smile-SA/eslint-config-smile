@@ -2,6 +2,7 @@ import jsRules from './rules/js';
 import nextRules from './rules/next';
 import reactRules from './rules/react';
 import tsRules from './rules/ts';
+import tsWithTypeInformationRules from './rules/tsWithTypeInformation';
 import vueRules from './rules/vue';
 
 const env = {
@@ -38,6 +39,25 @@ const vueParserOptions = {
 
 const extensions = ['.js', '.jsx', '.mjs', '.cjs', '.vue'];
 
+const tsOverride = {
+  extends: [
+    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  files: ['*.ts?(x)'],
+  parser: '@typescript-eslint/parser',
+  parserOptions,
+  plugins: ['@typescript-eslint'],
+  rules: tsRules,
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: extensions.concat(['.ts', '.tsx']),
+      },
+    },
+  },
+};
+
 export const configs = {
   js: {
     env,
@@ -46,26 +66,7 @@ export const configs = {
       'eslint:recommended',
       'plugin:prettier/recommended',
     ],
-    overrides: [
-      {
-        extends: [
-          'plugin:prettier/recommended',
-          'plugin:@typescript-eslint/recommended',
-        ],
-        files: ['*.ts?(x)'],
-        parser: '@typescript-eslint/parser',
-        parserOptions,
-        plugins: ['@typescript-eslint'],
-        rules: tsRules,
-        settings: {
-          'import/resolver': {
-            node: {
-              extensions: extensions.concat(['.ts', '.tsx']),
-            },
-          },
-        },
-      },
-    ],
+    overrides: [tsOverride],
     parserOptions,
     plugins: ['import'],
     rules: jsRules,
@@ -101,6 +102,23 @@ export const configs = {
     parserOptions,
     plugins: ['jsx-a11y', 'react', 'react-hooks'],
     rules: reactRules,
+  },
+  ts: {
+    overrides: [
+      {
+        ...tsOverride,
+        extends: tsOverride.extends.concat([
+          'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        ]),
+        rules: {
+          ...tsRules,
+          ...tsWithTypeInformationRules,
+        },
+      },
+    ],
+    parserOptions: {
+      project: ['./tsconfig.json', './tsconfig.config.json'],
+    },
   },
   vue: {
     env,

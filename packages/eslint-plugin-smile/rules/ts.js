@@ -2,6 +2,7 @@ const overrideRules = {
   'default-param-last': 'off',
   'no-array-constructor': 'off',
   'no-dupe-class-members': 'off',
+  'no-duplicate-imports': 'off',
   'no-invalid-this': 'off',
   'no-loop-func': 'off',
   'no-redeclare': 'off',
@@ -43,47 +44,6 @@ const supportedRules = {
     },
   ],
   '@typescript-eslint/method-signature-style': 'error',
-  '@typescript-eslint/naming-convention': [
-    'error',
-    {
-      format: ['camelCase'],
-      leadingUnderscore: 'forbid',
-      selector: 'default',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['camelCase', 'StrictPascalCase'],
-      leadingUnderscore: 'allow',
-      selector: 'variableLike',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['strictCamelCase', 'UPPER_CASE'],
-      leadingUnderscore: 'forbid',
-      modifiers: ['global', 'exported'],
-      selector: 'variable',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['strictCamelCase', 'StrictPascalCase'],
-      leadingUnderscore: 'forbid',
-      selector: 'function',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['StrictPascalCase'],
-      leadingUnderscore: 'forbid',
-      selector: 'typeLike',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['StrictPascalCase'],
-      leadingUnderscore: 'forbid',
-      prefix: ['I'],
-      selector: 'interface',
-      trailingUnderscore: 'forbid',
-    },
-  ],
   '@typescript-eslint/no-confusing-non-null-assertion': 'error',
   '@typescript-eslint/no-duplicate-enum-values': 'error',
   '@typescript-eslint/no-dynamic-delete': 'error',
@@ -113,13 +73,63 @@ const supportedRules = {
   '@typescript-eslint/prefer-for-of': 'error',
   '@typescript-eslint/prefer-function-type': 'error',
   '@typescript-eslint/prefer-literal-enum-member': 'error',
-  '@typescript-eslint/prefer-optional-chain': 'error',
   '@typescript-eslint/prefer-ts-expect-error': 'error',
   '@typescript-eslint/sort-type-constituents': 'error',
   // '@typescript-eslint/sort-type-union-intersection-members': 'error', // Deprecated
   // '@typescript-eslint/type-annotation-spacing': 'error', // Formatting
   // '@typescript-eslint/typedef': 'error',
   '@typescript-eslint/unified-signatures': 'error',
+};
+
+export const specialVueRules = {
+  '@typescript-eslint/naming-convention': [
+    'error',
+    {
+      format: ['camelCase'],
+      leadingUnderscore: 'forbid',
+      selector: 'default',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      format: ['camelCase', 'StrictPascalCase'],
+      leadingUnderscore: 'allow',
+      selector: 'variableLike',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      format: ['strictCamelCase', 'UPPER_CASE'],
+      leadingUnderscore: 'forbid',
+      modifiers: ['global', 'exported'],
+      selector: 'variable',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      format: ['strictCamelCase', 'StrictPascalCase'],
+      leadingUnderscore: 'forbid',
+      selector: 'function',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      format: null,
+      leadingUnderscore: 'forbid',
+      selector: 'objectLiteralProperty',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      format: ['StrictPascalCase'],
+      leadingUnderscore: 'forbid',
+      selector: 'typeLike',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      format: ['StrictPascalCase'],
+      leadingUnderscore: 'forbid',
+      prefix: ['I'],
+      selector: 'interface',
+      trailingUnderscore: 'forbid',
+    },
+  ],
+  '@typescript-eslint/prefer-optional-chain': 'error',
 };
 
 // @see https://typescript-eslint.io/rules/#extension-rules
@@ -161,5 +171,6 @@ const extensionRules = {
 export default {
   ...overrideRules,
   ...supportedRules,
+  ...specialVueRules,
   ...extensionRules,
 };
