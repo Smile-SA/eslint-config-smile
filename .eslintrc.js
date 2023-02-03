@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ["plugin:smile/js"],
+  extends: ['plugin:smile/js'],
   root: true,
 };
