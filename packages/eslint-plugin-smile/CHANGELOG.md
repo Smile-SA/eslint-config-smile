@@ -1,3 +1,9 @@
+### 0.1.0 (2023-02-06)
+
+##### New Features
+
+- add storybook compatibility ([63ff1de7](https://github.com/Smile-SA/eslint-plugin-smile/commit/63ff1de776bc550e6c82039ee9e54d6094803504))
+
 #### 0.0.2 (2023-02-06)
 
 ##### Chores
