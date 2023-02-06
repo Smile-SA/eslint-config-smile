@@ -163,7 +163,7 @@ const extensionRules = {
     'error',
     { allowShortCircuit: true, allowTaggedTemplates: true, allowTernary: true },
   ],
-  '@typescript-eslint/no-use-before-define': 'error',
+  '@typescript-eslint/no-use-before-define': ['error', { variables: false }],
   '@typescript-eslint/no-useless-constructor': 'error',
   // '@typescript-eslint/object-curly-spacing': 'error', // Formatting
   // '@typescript-eslint/padding-line-between-statements': 'error', // Formatting

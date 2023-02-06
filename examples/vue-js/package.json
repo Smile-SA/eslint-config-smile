@@ -16,6 +16,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.0.0",
     "eslint": "^8.33.0",
+    "eslint-plugin-smile": "file:../../packages/eslint-plugin-smile",
     "eslint-plugin-vue": "^9.9.0",
     "prettier": "^2.7.1",
     "vite": "^4.0.0"

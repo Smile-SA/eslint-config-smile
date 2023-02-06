@@ -1,6 +1,7 @@
 import angularRules from './rules/angular';
 import jsRules from './rules/js';
 import nextRules from './rules/next';
+import prettierRules from './rules/prettier';
 import reactRules from './rules/react';
 import storybookRules from './rules/storybook';
 import tsRules from './rules/ts';
@@ -50,7 +51,10 @@ const tsOverride = {
   parser: '@typescript-eslint/parser',
   parserOptions,
   plugins: ['@typescript-eslint'],
-  rules: tsRules,
+  rules: {
+    ...tsRules,
+    ...prettierRules,
+  },
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
@@ -65,7 +69,10 @@ const tsOverride = {
 };
 
 const storybookOverride = {
-  files: ['**/*.stories.*'],
+  files: [
+    '*.stories.@(ts|tsx|js|jsx|mjs|cjs)',
+    '*.story.@(ts|tsx|js|jsx|mjs|cjs)',
+  ],
   rules: storybookRules,
 };
 
@@ -86,6 +93,7 @@ export const configs = {
         rules: {
           ...tsRules,
           ...angularRules,
+          ...prettierRules,
         },
       },
       {
@@ -104,12 +112,17 @@ export const configs = {
     extends: [
       'plugin:import/recommended',
       'eslint:recommended',
+      'plugin:storybook/recommended',
+      'plugin:storybook/csf',
       'plugin:prettier/recommended',
     ],
     overrides: [tsOverride, storybookOverride],
     parserOptions,
     plugins: ['import'],
-    rules: jsRules,
+    rules: {
+      ...jsRules,
+      ...prettierRules,
+    },
     settings: {
       'import/resolver': {
         node: {
@@ -126,7 +139,10 @@ export const configs = {
       'plugin:prettier/recommended',
     ],
     overrides: [tsOverride, storybookOverride],
-    rules: nextRules,
+    rules: {
+      ...nextRules,
+      ...prettierRules,
+    },
   },
   react: {
     env,
@@ -143,7 +159,10 @@ export const configs = {
     overrides: [tsOverride, storybookOverride],
     parserOptions,
     plugins: ['jsx-a11y', 'react', 'react-hooks'],
-    rules: reactRules,
+    rules: {
+      ...reactRules,
+      ...prettierRules,
+    },
   },
   ts: {
     overrides: [
@@ -155,12 +174,13 @@ export const configs = {
         rules: {
           ...tsRules,
           ...tsWithTypeInformationRules,
+          ...prettierRules,
         },
       },
       storybookOverride,
     ],
     parserOptions: {
-      project: ['./tsconfig.json', './tsconfig.config.json'],
+      project: ['./tsconfig.json'],
     },
   },
   vue: {
@@ -173,7 +193,10 @@ export const configs = {
     overrides: [storybookOverride],
     parserOptions,
     plugins: ['vue'],
-    rules: vueRules,
+    rules: {
+      ...vueRules,
+      ...prettierRules,
+    },
   },
   'vue-ts': {
     env,
@@ -195,6 +218,7 @@ export const configs = {
         plugins: ['@typescript-eslint'],
         rules: {
           ...tsRules,
+          ...prettierRules,
           // following rules does not work without type informations in vue
           '@typescript-eslint/naming-convention': 'off',
           '@typescript-eslint/prefer-optional-chain': 'off',
@@ -204,6 +228,9 @@ export const configs = {
     ],
     parserOptions: vueParserOptions,
     plugins: ['vue'],
-    rules: vueRules,
+    rules: {
+      ...vueRules,
+      ...prettierRules,
+    },
   },
 };

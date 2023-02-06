@@ -23,6 +23,8 @@
     "@vue/eslint-config-typescript": "^11.0.0",
     "@vue/tsconfig": "^0.1.3",
     "eslint": "^8.33.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-smile": "file:../../packages/eslint-plugin-smile",
     "eslint-plugin-vue": "^9.9.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",

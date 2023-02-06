@@ -3,4 +3,15 @@ const overrideRules = {
   'react/function-component-definition': 'off',
 };
 
-export default overrideRules;
+const storybookRules = {
+  'storybook/csf-component': 'error',
+  'storybook/hierarchy-separator': 'error',
+  'storybook/no-redundant-story-name': 'error',
+  'storybook/no-stories-of': 'error',
+  'storybook/prefer-pascal-case': 'error',
+};
+
+export default {
+  ...overrideRules,
+  ...storybookRules,
+};

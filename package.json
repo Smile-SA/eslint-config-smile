@@ -7,6 +7,7 @@
   "scripts": {
     "build": "npm run build -w packages/eslint-plugin-smile",
     "eslint": "npm run eslint -w packages/eslint-plugin-smile",
+    "eslint:debug": "eslint --print-config",
     "eslint:all": "npm run eslint -ws",
     "eslint:angular": "npm run eslint -w examples/angular",
     "eslint:js": "npm run eslint -w examples/js",
@@ -14,6 +15,8 @@
     "eslint:next-ts": "npm run eslint -w examples/next-ts",
     "eslint:react-js": "npm run eslint -w examples/react-js",
     "eslint:react-ts": "npm run eslint -w examples/react-ts",
+    "eslint:storybook-js": "npm run eslint -w examples/storybook-js",
+    "eslint:storybook-ts": "npm run eslint -w examples/storybook-ts",
     "eslint:ts": "npm run eslint -w examples/ts",
     "eslint:vue-js": "npm run eslint -w examples/vue-js",
     "eslint:vue-ts": "npm run eslint -w examples/vue-ts",
@@ -31,16 +34,11 @@
     "eslint": "^8.33.0",
     "husky": "^8.0.3",
     "lerna": "^6.4.1",
-    "lint-staged": "^13.1.0",
     "prettier": "^2.8.3"
   },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "lint-staged": {
-    "*": "prettier --write --ignore-unknown --ignore-path .gitignore",
-    "*.{js,jsx,ts,tsx}": "eslint --fix --max-warnings=0 --ignore-path .gitignore"
   }
 }

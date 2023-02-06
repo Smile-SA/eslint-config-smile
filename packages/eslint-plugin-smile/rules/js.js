@@ -26,7 +26,7 @@ const possibleProblemRules = {
       varsIgnorePattern: '^_',
     },
   ],
-  'no-use-before-define': 'error',
+  'no-use-before-define': ['error', { variables: false }],
   'require-atomic-updates': 'error',
 };
 
@@ -222,7 +222,7 @@ const importStyleGuideRules = {
   // 'import/dynamic-import-chunkname': 'error',
   // 'import/exports-last': 'error',
   // 'import/extensions': 'error',
-  'import/first': ['error', 'absolute-first'],
+  // 'import/first': ['error', 'absolute-first'], // Replaced by import/order rule
   // 'import/group-exports': 'error',
   // 'import/max-dependencies': 'error',
   'import/newline-after-import': ['error', { considerComments: true }],

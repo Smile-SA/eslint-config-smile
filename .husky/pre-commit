@@ -3,4 +3,8 @@
 
 . "$(dirname "$0")/_/husky.sh"
 
-npx lint-staged
+fileList=$(git diff --diff-filter=d --cached --name-only)
+
+npm run prettier && \
+  npm run eslint && \
+  git add $fileList
