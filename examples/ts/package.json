@@ -1,8 +1,9 @@
 {
+  "private": true,
   "name": "app-ts",
   "version": "0.0.1",
   "scripts": {
-    "eslint": "eslint . --fix "
+    "eslint": "eslint . --fix"
   },
   "author": {
     "name": "Tony Cabaye",
