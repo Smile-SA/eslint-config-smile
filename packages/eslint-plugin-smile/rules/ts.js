@@ -104,6 +104,12 @@ export const specialVueRules = {
       trailingUnderscore: 'forbid',
     },
     {
+      format: ['StrictPascalCase'],
+      leadingUnderscore: 'forbid',
+      selector: 'class',
+      trailingUnderscore: 'forbid',
+    },
+    {
       format: ['strictCamelCase', 'StrictPascalCase'],
       leadingUnderscore: 'forbid',
       selector: 'function',

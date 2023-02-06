@@ -7,7 +7,7 @@ const overrideRules = {
       img: ['Image'],
     },
   ],
-  // 'jsx-a11y/anchor-is-valid': 'off',
+  'jsx-a11y/anchor-is-valid': 'off',
 };
 
 // @see https://nextjs.org/docs/basic-features/eslint#eslint-plugin

@@ -1,3 +1,4 @@
+import angularRules from './rules/angular';
 import jsRules from './rules/js';
 import nextRules from './rules/next';
 import reactRules from './rules/react';
@@ -41,8 +42,8 @@ const extensions = ['.js', '.jsx', '.mjs', '.cjs', '.vue'];
 
 const tsOverride = {
   extends: [
-    'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
   ],
   files: ['*.ts?(x)'],
   parser: '@typescript-eslint/parser',
@@ -50,15 +51,47 @@ const tsOverride = {
   plugins: ['@typescript-eslint'],
   rules: tsRules,
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
     'import/resolver': {
-      node: {
-        extensions: extensions.concat(['.ts', '.tsx']),
+      typescript: {
+        alwaysTryTypes: true,
+        project: '.',
       },
     },
   },
 };
 
 export const configs = {
+  angular: {
+    ignorePatterns: ['projects/**/*'],
+    overrides: [
+      {
+        ...tsOverride,
+        extends: [
+          'plugin:smile/js',
+          'plugin:@typescript-eslint/recommended',
+          'plugin:@angular-eslint/recommended',
+          'plugin:@angular-eslint/recommended--extra',
+          'plugin:@angular-eslint/template/process-inline-templates',
+          'plugin:prettier/recommended',
+        ],
+        rules: {
+          ...tsRules,
+          ...angularRules,
+        },
+      },
+      {
+        extends: [
+          'plugin:@angular-eslint/template/recommended',
+          'plugin:prettier/recommended',
+        ],
+        files: ['*.html'],
+        rules: {},
+      },
+    ],
+  },
   js: {
     env,
     extends: [

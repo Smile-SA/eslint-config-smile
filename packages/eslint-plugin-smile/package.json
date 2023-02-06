@@ -54,6 +54,7 @@
     "eslint": "^8.33.0",
     "eslint-config-next": "^13.1.6",
     "eslint-config-react-app": "^7.0.1",
+    "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-vue": "^9.9.0",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
@@ -64,6 +65,9 @@
       "optional": true
     },
     "eslint-config-react-app": {
+      "optional": true
+    },
+    "eslint-import-resolver-typescript": {
       "optional": true
     },
     "eslint-plugin-vue": {

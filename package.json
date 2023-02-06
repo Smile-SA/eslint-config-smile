@@ -8,6 +8,7 @@
     "build": "npm run build -w packages/eslint-plugin-smile",
     "eslint": "npm run eslint -w packages/eslint-plugin-smile",
     "eslint:all": "npm run eslint -ws",
+    "eslint:angular": "npm run eslint -w examples/angular",
     "eslint:js": "npm run eslint -w examples/js",
     "eslint:next-js": "npm run eslint -w examples/next-js",
     "eslint:next-ts": "npm run eslint -w examples/next-ts",

@@ -65,7 +65,7 @@ const suggestionRules = {
   // 'max-params': 'error',
   // 'max-statements': 'error',
   // 'multiline-comment-style': 'error',
-  'new-cap': 'error',
+  // 'new-cap': 'error',
   'no-alert': 'error',
   'no-array-constructor': 'error',
   'no-bitwise': 'error',

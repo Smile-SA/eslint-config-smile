@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 import styles from '@/styles/Home.module.css';
 
-// eslint-disable-next-line new-cap
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home(): JSX.Element {
