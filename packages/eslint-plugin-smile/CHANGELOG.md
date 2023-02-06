@@ -1,3 +1,10 @@
+### 0.2.0 (2023-02-06)
+
+##### New Features
+
+- add eslint-plugin-cypress ([1305983f](https://github.com/Smile-SA/eslint-plugin-smile/commit/1305983fc5d6908532f039b335eca555fde6eb19))
+- add eslint-plugin-storybook ([940bcf9a](https://github.com/Smile-SA/eslint-plugin-smile/commit/940bcf9a19cd46c44b9a3a5cce5d044bcedb9e08))
+
 ### 0.1.0 (2023-02-06)
 
 ##### New Features
