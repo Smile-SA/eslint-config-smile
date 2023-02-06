@@ -1,3 +1,10 @@
+#### 0.0.2 (2023-02-06)
+
+##### Chores
+
+- mark examples as private ([4b904826](https://github.com/Smile-SA/eslint-plugin-smile/commit/4b90482671b50c8fb5522d45b97d44011953023b))
+- add lerna ([c39f23da](https://github.com/Smile-SA/eslint-plugin-smile/commit/c39f23da575f7d18f2beccf76dc9017834b941e2))
+
 #### 0.0.1 (2023-02-06)
 
 ##### Chores
