@@ -37,7 +37,7 @@ const reactRules = {
   'react/hook-use-state': 'error',
   'react/iframe-missing-sandbox': 'error',
   'react/jsx-boolean-value': 'error',
-  'react/jsx-child-element-spacing': 'error', // formatting
+  // 'react/jsx-child-element-spacing': 'error', // formatting
   'react/jsx-closing-bracket-location': 'error', // formatting
   'react/jsx-closing-tag-location': 'error', // formatting
   'react/jsx-curly-brace-presence': [

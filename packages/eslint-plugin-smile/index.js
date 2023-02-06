@@ -2,6 +2,7 @@ import angularRules from './rules/angular';
 import jsRules from './rules/js';
 import nextRules from './rules/next';
 import reactRules from './rules/react';
+import storybookRules from './rules/storybook';
 import tsRules from './rules/ts';
 import tsWithTypeInformationRules from './rules/tsWithTypeInformation';
 import vueRules from './rules/vue';
@@ -63,6 +64,11 @@ const tsOverride = {
   },
 };
 
+const storybookOverride = {
+  files: ['**/*.stories.*'],
+  rules: storybookRules,
+};
+
 export const configs = {
   angular: {
     ignorePatterns: ['projects/**/*'],
@@ -90,6 +96,7 @@ export const configs = {
         files: ['*.html'],
         rules: {},
       },
+      storybookOverride,
     ],
   },
   js: {
@@ -99,7 +106,7 @@ export const configs = {
       'eslint:recommended',
       'plugin:prettier/recommended',
     ],
-    overrides: [tsOverride],
+    overrides: [tsOverride, storybookOverride],
     parserOptions,
     plugins: ['import'],
     rules: jsRules,
@@ -118,6 +125,7 @@ export const configs = {
       'plugin:jsx-a11y/recommended',
       'plugin:prettier/recommended',
     ],
+    overrides: [tsOverride, storybookOverride],
     rules: nextRules,
   },
   react: {
@@ -132,6 +140,7 @@ export const configs = {
       'plugin:jsx-a11y/recommended',
       'plugin:prettier/recommended',
     ],
+    overrides: [tsOverride, storybookOverride],
     parserOptions,
     plugins: ['jsx-a11y', 'react', 'react-hooks'],
     rules: reactRules,
@@ -148,6 +157,7 @@ export const configs = {
           ...tsWithTypeInformationRules,
         },
       },
+      storybookOverride,
     ],
     parserOptions: {
       project: ['./tsconfig.json', './tsconfig.config.json'],
@@ -160,6 +170,7 @@ export const configs = {
       'plugin:vue/vue3-essential',
       'plugin:prettier/recommended',
     ],
+    overrides: [storybookOverride],
     parserOptions,
     plugins: ['vue'],
     rules: vueRules,
@@ -189,6 +200,7 @@ export const configs = {
           '@typescript-eslint/prefer-optional-chain': 'off',
         },
       },
+      storybookOverride,
     ],
     parserOptions: vueParserOptions,
     plugins: ['vue'],

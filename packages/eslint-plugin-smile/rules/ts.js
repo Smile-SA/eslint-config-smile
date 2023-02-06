@@ -97,7 +97,7 @@ export const specialVueRules = {
       trailingUnderscore: 'forbid',
     },
     {
-      format: ['strictCamelCase', 'UPPER_CASE'],
+      format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
       leadingUnderscore: 'forbid',
       modifiers: ['global', 'exported'],
       selector: 'variable',
