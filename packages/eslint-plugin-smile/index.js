@@ -1,4 +1,5 @@
 import angularRules from './rules/angular';
+import cypressRules from './rules/cypress';
 import jsRules from './rules/js';
 import nextRules from './rules/next';
 import prettierRules from './rules/prettier';
@@ -76,6 +77,11 @@ const storybookOverride = {
   rules: storybookRules,
 };
 
+const cypressOverride = {
+  files: ['*.cy.@(ts|tsx|js|jsx|mjs|cjs)'],
+  rules: cypressRules,
+};
+
 export const configs = {
   angular: {
     ignorePatterns: ['projects/**/*'],
@@ -105,6 +111,7 @@ export const configs = {
         rules: {},
       },
       storybookOverride,
+      cypressOverride,
     ],
   },
   js: {
@@ -114,9 +121,10 @@ export const configs = {
       'eslint:recommended',
       'plugin:storybook/recommended',
       'plugin:storybook/csf',
+      'plugin:cypress/recommended',
       'plugin:prettier/recommended',
     ],
-    overrides: [tsOverride, storybookOverride],
+    overrides: [tsOverride, storybookOverride, cypressOverride],
     parserOptions,
     plugins: ['import'],
     rules: {
@@ -138,7 +146,7 @@ export const configs = {
       'plugin:jsx-a11y/recommended',
       'plugin:prettier/recommended',
     ],
-    overrides: [tsOverride, storybookOverride],
+    overrides: [tsOverride, storybookOverride, cypressOverride],
     rules: {
       ...nextRules,
       ...prettierRules,
@@ -156,7 +164,7 @@ export const configs = {
       'plugin:jsx-a11y/recommended',
       'plugin:prettier/recommended',
     ],
-    overrides: [tsOverride, storybookOverride],
+    overrides: [tsOverride, storybookOverride, cypressOverride],
     parserOptions,
     plugins: ['jsx-a11y', 'react', 'react-hooks'],
     rules: {
@@ -178,9 +186,10 @@ export const configs = {
         },
       },
       storybookOverride,
+      cypressOverride,
     ],
     parserOptions: {
-      project: ['./tsconfig.json'],
+      project: ['./tsconfig.json', './tsconfig.config.json'],
     },
   },
   vue: {
@@ -190,7 +199,7 @@ export const configs = {
       'plugin:vue/vue3-essential',
       'plugin:prettier/recommended',
     ],
-    overrides: [storybookOverride],
+    overrides: [storybookOverride, cypressOverride],
     parserOptions,
     plugins: ['vue'],
     rules: {
@@ -225,6 +234,7 @@ export const configs = {
         },
       },
       storybookOverride,
+      cypressOverride,
     ],
     parserOptions: vueParserOptions,
     plugins: ['vue'],

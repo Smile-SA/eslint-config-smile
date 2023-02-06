@@ -10,6 +10,7 @@
     "eslint:debug": "eslint --print-config",
     "eslint:all": "npm run eslint -ws",
     "eslint:angular": "npm run eslint -w examples/angular",
+    "eslint:cypress": "npm run eslint -w examples/cypress",
     "eslint:js": "npm run eslint -w examples/js",
     "eslint:next-js": "npm run eslint -w examples/next-js",
     "eslint:next-ts": "npm run eslint -w examples/next-ts",

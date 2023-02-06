@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "cypress",
+  "version": "0.0.1",
+  "scripts": {
+    "cypress": "cypress open",
+    "eslint": "eslint . --fix"
+  },
+  "author": {
+    "name": "Tony Cabaye",
+    "email": "tonai59+github@gmail.com",
+    "url": "https://github.com/tonai"
+  },
+  "license": "GPL",
+  "engines": {
+    "node": ">=10"
+  },
+  "devDependencies": {
+    "cypress": "^12.5.1",
+    "eslint": "^8.33.0",
+    "eslint-plugin-smile": "file:../../packages/eslint-plugin-smile"
+  }
+}

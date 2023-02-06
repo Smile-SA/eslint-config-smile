@@ -35,7 +35,7 @@ const suggestionRules = {
   'accessor-pairs': 'error',
   'arrow-body-style': 'error',
   'block-scoped-var': 'error',
-  camelcase: 'error',
+  // camelcase: 'error',
   // 'capitalized-comments': 'error',
   'class-methods-use-this': 'error',
   // 'complexity': 'error',
@@ -48,7 +48,7 @@ const suggestionRules = {
   'dot-notation': 'error',
   eqeqeq: ['error', 'always', { null: 'ignore' }],
   'func-name-matching': 'error',
-  'func-names': 'error',
+  // 'func-names': 'error',
   'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
   'grouped-accessor-pairs': 'error',
   // 'guard-for-in': 'error',
@@ -152,7 +152,19 @@ const suggestionRules = {
   // 'operator-assignment': 'error',
   'prefer-arrow-callback': 'error',
   'prefer-const': 'error',
-  'prefer-destructuring': 'error',
+  'prefer-destructuring': [
+    'error',
+    {
+      AssignmentExpression: {
+        array: false,
+        object: false,
+      },
+      VariableDeclarator: {
+        array: false,
+        object: true,
+      },
+    },
+  ],
   'prefer-exponentiation-operator': 'error',
   // 'prefer-named-capture-group': 'error',
   // 'prefer-numeric-literals': 'error',
