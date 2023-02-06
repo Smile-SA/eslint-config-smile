@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-smile",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Smile ESLint rules for js, ts, react, vue, angular, next...",
   "homepage": "https://github.com/Smile-SA/eslint-plugin-smile",
   "repository": {
@@ -15,7 +15,8 @@
     "LICENSE",
     "README.md",
     "index.js",
-    "dist"
+    "dist",
+    "rules"
   ],
   "scripts": {
     "build": "rollup index.js --file dist/index.js --format cjs",
