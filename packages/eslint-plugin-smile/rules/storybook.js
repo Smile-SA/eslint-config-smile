@@ -1,6 +1,7 @@
 const overrideRules = {
   'import/no-anonymous-default-export': 'off',
   'react/function-component-definition': 'off',
+  'react/no-multi-comp': 'off',
 };
 
 const storybookRules = {
