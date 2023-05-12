@@ -46,7 +46,6 @@ const supportedRules = {
   '@typescript-eslint/method-signature-style': 'error',
   '@typescript-eslint/no-confusing-non-null-assertion': 'error',
   '@typescript-eslint/no-duplicate-enum-values': 'error',
-  '@typescript-eslint/no-dynamic-delete': 'error',
   '@typescript-eslint/no-explicit-any': 'error',
   '@typescript-eslint/no-extraneous-class': 'error',
   '@typescript-eslint/no-invalid-void-type': 'error',
@@ -125,6 +124,19 @@ export const specialVueRules = {
       format: ['StrictPascalCase'],
       leadingUnderscore: 'forbid',
       selector: 'typeLike',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      format: ['StrictPascalCase'],
+      leadingUnderscore: 'forbid',
+      selector: 'enumMember',
+      trailingUnderscore: 'forbid',
+    },
+    {
+      format: ['StrictPascalCase'],
+      leadingUnderscore: 'forbid',
+      prefix: ['I'],
+      selector: 'typeAlias',
       trailingUnderscore: 'forbid',
     },
     {
