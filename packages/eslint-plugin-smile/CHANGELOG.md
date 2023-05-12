@@ -1,3 +1,9 @@
+#### 0.2.1 (2023-05-12)
+
+##### Bug Fixes
+
+- material UI imports ([9b68edf6](https://github.com/Smile-SA/eslint-plugin-smile/commit/9b68edf6a04ff00ff98d6e99ce1af18121da8aa0))
+
 ### 0.2.0 (2023-02-06)
 
 ##### New Features
