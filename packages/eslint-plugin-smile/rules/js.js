@@ -119,7 +119,13 @@ const suggestionRules = {
   'no-proto': 'error',
   // 'no-restricted-exports': 'error',
   // 'no-restricted-globals': 'error',
-  // 'no-restricted-imports': 'error',
+  'no-restricted-imports': [
+    'error',
+    {
+      message: 'Please use "import foo from \'@mui/material/foo\'" instead.',
+      name: '@mui/material',
+    },
+  ],
   // 'no-restricted-properties': 'error',
   // 'no-restricted-syntax': 'error',
   'no-return-assign': 'error',
