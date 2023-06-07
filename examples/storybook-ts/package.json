@@ -8,12 +8,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": {
-    "name": "Tony Cabaye",
-    "email": "tonai59+github@gmail.com",
-    "url": "https://github.com/tonai"
-  },
-  "license": "GPL",
   "engines": {
     "node": ">=10"
   },

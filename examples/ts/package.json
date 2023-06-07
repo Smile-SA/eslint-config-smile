@@ -6,12 +6,6 @@
     "eslint": "eslint . --fix",
     "typescript": "tsc"
   },
-  "author": {
-    "name": "Tony Cabaye",
-    "email": "tonai59+github@gmail.com",
-    "url": "https://github.com/tonai"
-  },
-  "license": "GPL",
   "engines": {
     "node": ">=10"
   },
