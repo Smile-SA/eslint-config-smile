@@ -1,3 +1,9 @@
+#### 0.2.2 (2023-06-07)
+
+##### Chores
+
+- update license ([a93834d6](https://github.com/Smile-SA/eslint-plugin-smile/commit/a93834d619a7b2c2a1d6be214dc3977bc819336a))
+
 #### 0.2.1 (2023-05-12)
 
 ##### Bug Fixes
