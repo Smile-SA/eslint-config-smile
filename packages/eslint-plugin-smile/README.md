@@ -33,7 +33,7 @@ For TypeScript support see [TypeScript configuration](#typescript).
 Install peerDependency:
 
 ```bash
-npm i -D eslint-config-react-app
+npm i -D eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-react-refresh
 ```
 
 And update `.eslintrc.json` with:
@@ -62,17 +62,23 @@ And update `.eslintrc.json` with:
 }
 ```
 
-Or for TypeScript use:
+For TypeScript also install following dependency:
 
-```json
-{
-  "extends": ["plugin:smile/vue-ts"]
-}
+```bash
+npm i -D @vue/eslint-config-prettier @vue/eslint-config-typescript @rushstack/eslint-patch
+```
+
+And update `.eslintrc.json` with:
+
+```js
+require('@rushstack/eslint-patch/modern-module-resolution');
+
+module.exports = {
+  extends: ['plugin:smile/vue-ts'],
+};
 ```
 
 And see [TypeScript configuration](#typescript).
-
-TypeScript require the package `@vue/eslint-config-typescript` to work, but it should already be there if you initialized your project with `npm init vue@latest` aand choose to add TypeScript.
 
 ### Angular project
 
@@ -125,7 +131,21 @@ TypeScript is already supported in following configurations:
 
 For Vue use `plugin:smile/vue-ts` instead.
 
-If you want to use additional rules that require type checking (see https://typescript-eslint.io/linting/typed-linting/) you can add the following configuration `plugin:smile/ts` (in addition to one of the previous configuration).
+If you want to use additional rules that require type checking (see https://typescript-eslint.io/linting/typed-linting/) you can add install additional peerDependency:
+
+```bash
+npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
+```
+
+And add the following configuration `plugin:smile/ts` (in addition to one of the previous configuration).
+
+Example:
+
+```json
+{
+  "extends": ["plugin:smile/next", "plugin:smile/ts"]
+}
+```
 
 ## Prettier configuration
 

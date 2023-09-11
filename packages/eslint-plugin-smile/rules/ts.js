@@ -80,76 +80,6 @@ const supportedRules = {
   '@typescript-eslint/unified-signatures': 'error',
 };
 
-export const specialVueRules = {
-  '@typescript-eslint/naming-convention': [
-    'error',
-    {
-      format: ['camelCase'],
-      leadingUnderscore: 'forbid',
-      selector: 'default',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['camelCase', 'StrictPascalCase'],
-      leadingUnderscore: 'allow',
-      selector: 'variableLike',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
-      leadingUnderscore: 'forbid',
-      modifiers: ['global', 'exported'],
-      selector: 'variable',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['StrictPascalCase'],
-      leadingUnderscore: 'forbid',
-      selector: 'class',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['strictCamelCase', 'StrictPascalCase'],
-      leadingUnderscore: 'forbid',
-      selector: 'function',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: null,
-      leadingUnderscore: 'forbid',
-      selector: 'objectLiteralProperty',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['StrictPascalCase'],
-      leadingUnderscore: 'forbid',
-      selector: 'typeLike',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['StrictPascalCase'],
-      leadingUnderscore: 'forbid',
-      selector: 'enumMember',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['StrictPascalCase'],
-      leadingUnderscore: 'forbid',
-      prefix: ['I'],
-      selector: 'typeAlias',
-      trailingUnderscore: 'forbid',
-    },
-    {
-      format: ['StrictPascalCase'],
-      leadingUnderscore: 'forbid',
-      prefix: ['I'],
-      selector: 'interface',
-      trailingUnderscore: 'forbid',
-    },
-  ],
-  '@typescript-eslint/prefer-optional-chain': 'error',
-};
-
 // @see https://typescript-eslint.io/rules/#extension-rules
 const extensionRules = {
   // '@typescript-eslint/brace-style': 'error', // Formatting
@@ -189,6 +119,5 @@ const extensionRules = {
 export default {
   ...overrideRules,
   ...supportedRules,
-  ...specialVueRules,
   ...extensionRules,
 };

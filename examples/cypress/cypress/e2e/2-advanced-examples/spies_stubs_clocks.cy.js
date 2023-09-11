@@ -77,7 +77,8 @@ context('Spies, Stubs, and Clock', () => {
 
     cy.clock(now);
     cy.visit('https://example.cypress.io/commands/spies-stubs-clocks');
-    cy.get('#clock-div').click().should('have.text', '1489449600');
+    cy.get('#clock-div').click();
+    cy.get('#clock-div').should('have.text', '1489449600');
   });
 
   it('cy.tick() - move time in the browser', () => {
@@ -89,10 +90,12 @@ context('Spies, Stubs, and Clock', () => {
 
     cy.clock(now);
     cy.visit('https://example.cypress.io/commands/spies-stubs-clocks');
-    cy.get('#tick-div').click().should('have.text', '1489449600');
+    cy.get('#tick-div').click();
+    cy.get('#tick-div').should('have.text', '1489449600');
 
     cy.tick(10000); // 10 seconds passed
-    cy.get('#tick-div').click().should('have.text', '1489449610');
+    cy.get('#tick-div').click();
+    cy.get('#tick-div').should('have.text', '1489449610');
   });
 
   it('cy.stub() matches depending on arguments', () => {
@@ -147,13 +150,13 @@ context('Spies, Stubs, and Clock', () => {
     // let's confirm "add" method was called with two numbers
     expect(spy).to.be.calledWith(
       Cypress.sinon.match.number,
-      Cypress.sinon.match.number
+      Cypress.sinon.match.number,
     );
 
     // alternatively, provide the value to match
     expect(spy).to.be.calledWith(
       Cypress.sinon.match(2),
-      Cypress.sinon.match(3)
+      Cypress.sinon.match(3),
     );
 
     // match any value
@@ -192,21 +195,21 @@ context('Spies, Stubs, and Clock', () => {
       Cypress.sinon.match.number,
       Cypress.sinon
         .match(isGreaterThan(2), '> 2')
-        .and(Cypress.sinon.match(isLessThan(4), '< 4'))
+        .and(Cypress.sinon.match(isLessThan(4), '< 4')),
     );
 
     expect(spy).to.be.calledWith(
       Cypress.sinon.match.number,
       Cypress.sinon
         .match(isGreaterThan(200), '> 200')
-        .or(Cypress.sinon.match(3))
+        .or(Cypress.sinon.match(3)),
     );
 
     // matchers can be used from BDD assertions
     cy.get('@add').should(
       'have.been.calledWith',
       Cypress.sinon.match.number,
-      Cypress.sinon.match(3)
+      Cypress.sinon.match(3),
     );
 
     // you can alias matchers for shorter test code

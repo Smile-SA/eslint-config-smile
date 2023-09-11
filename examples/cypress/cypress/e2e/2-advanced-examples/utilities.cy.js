@@ -18,10 +18,9 @@ context('Utilities', () => {
     // https://on.cypress.io/$
     const $li = Cypress.$('.utility-jquery li:first');
 
-    cy.wrap($li)
-      .should('not.have.class', 'active')
-      .click()
-      .should('have.class', 'active');
+    cy.wrap($li).should('not.have.class', 'active');
+    cy.wrap($li).click();
+    cy.wrap($li).should('have.class', 'active');
   });
 
   it('Cypress.Blob - blob utilities and base64 string conversion', () => {
@@ -32,7 +31,7 @@ context('Utilities', () => {
       Cypress.Blob.imgSrcToDataURL(
         'https://example.cypress.io/assets/img/javascript-logo.png',
         undefined,
-        'anonymous'
+        'anonymous',
       ).then((dataUrl) => {
         // create an <img> element and set its src to the dataUrl
         const img = Cypress.$('<img />', { src: dataUrl });
@@ -42,8 +41,9 @@ context('Utilities', () => {
         // append the image
         $div.append(img);
 
-        cy.get('.utility-blob img').click().should('have.attr', 'src', dataUrl);
-      })
+        cy.get('.utility-blob img').click();
+        cy.get('.utility-blob img').should('have.attr', 'src', dataUrl);
+      }),
     );
   });
 
@@ -103,7 +103,7 @@ context('Utilities', () => {
       waitOneSecond().then((str) => {
         expect(str).to.eq('foo');
         expect(waited).to.be.true;
-      })
+      }),
     );
   });
 });

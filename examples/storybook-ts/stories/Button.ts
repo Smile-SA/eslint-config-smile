@@ -44,7 +44,7 @@ export const createButton = ({
     ? 'storybook-button--primary'
     : 'storybook-button--secondary';
   btn.className = ['storybook-button', `storybook-button--${size}`, mode].join(
-    ' '
+    ' ',
   );
 
   if (backgroundColor) {

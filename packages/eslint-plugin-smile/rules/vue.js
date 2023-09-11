@@ -119,7 +119,7 @@ const extensionRules = {
 const extentedRules = Object.fromEntries(
   Object.entries(extensionRules)
     .map(([key]) => [key, jsRules[key.substring(4)]])
-    .filter(([, value]) => value)
+    .filter(([, value]) => value),
 );
 
 export default {

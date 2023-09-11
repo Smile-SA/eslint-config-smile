@@ -7,7 +7,7 @@ interface IData {
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<IData>
+  res: NextApiResponse<IData>,
 ): void {
   res.status(200).json({ name: 'John Doe' });
 }

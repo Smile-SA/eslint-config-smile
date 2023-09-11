@@ -30,12 +30,12 @@
     "bumpAndPublish": "npm run prettier && git add packages/eslint-plugin-smile/CHANGELOG.md && git commit -m 'docs: update CHANGELOG files' && lerna publish --no-private"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.4.2",
-    "@commitlint/config-conventional": "^17.4.2",
-    "eslint": "^8.33.0",
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "eslint": "^8.49.0",
     "husky": "^8.0.3",
-    "lerna": "^6.4.1",
-    "prettier": "^2.8.3"
+    "lerna": "^7.2.0",
+    "prettier": "^3.0.3"
   },
   "commitlint": {
     "extends": [

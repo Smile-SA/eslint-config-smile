@@ -47,7 +47,7 @@ const reactRules = {
   'react/jsx-curly-newline': 'error', // formatting
   'react/jsx-curly-spacing': 'error', // formatting
   'react/jsx-equals-spacing': ['error', 'never'],
-  'react/jsx-filename-extension': ['error', { extensions: ['.js', '.tsx'] }],
+  // 'react/jsx-filename-extension': ['error', { extensions: ['.js', '.tsx'] }],
   'react/jsx-first-prop-new-line': 'error', // formatting
   'react/jsx-fragments': ['error', 'syntax'],
   'react/jsx-handler-names': ['error', { checkLocalVariables: true }],
@@ -123,9 +123,17 @@ const jsxA11yRules = {
   // 'jsx-a11y/prefer-tag-over-role': 'error',
 };
 
+const reactRefreshRules = {
+  'react-refresh/only-export-components': [
+    'warn',
+    { allowConstantExport: true },
+  ],
+};
+
 export default {
   ...overrideRules,
   ...reactRules,
   ...reactHooksRules,
   ...jsxA11yRules,
+  ...reactRefreshRules,
 };

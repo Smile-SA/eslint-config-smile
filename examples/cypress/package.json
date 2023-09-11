@@ -10,8 +10,8 @@
     "node": ">=10"
   },
   "devDependencies": {
-    "cypress": "^12.5.1",
-    "eslint": "^8.33.0",
+    "cypress": "^13.1.0",
+    "eslint": "^8.49.0",
     "eslint-plugin-smile": "file:../../packages/eslint-plugin-smile"
   }
 }

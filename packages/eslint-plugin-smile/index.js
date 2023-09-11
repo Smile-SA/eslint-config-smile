@@ -11,6 +11,7 @@ import vueRules from './rules/vue';
 
 const env = {
   browser: true,
+  commonjs: true,
   es2022: true,
   jest: true,
   node: true,
@@ -45,7 +46,12 @@ const extensions = ['.js', '.jsx', '.mjs', '.cjs', '.vue'];
 
 const tsOverride = {
   extends: [
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/stylistic',
+    'plugin:storybook/recommended',
+    'plugin:storybook/csf',
+    'plugin:cypress/recommended',
     'plugin:prettier/recommended',
   ],
   files: ['*.ts?(x)'],
@@ -92,7 +98,6 @@ export const configs = {
           'plugin:smile/js',
           'plugin:@typescript-eslint/recommended',
           'plugin:@angular-eslint/recommended',
-          'plugin:@angular-eslint/recommended--extra',
           'plugin:@angular-eslint/template/process-inline-templates',
           'plugin:prettier/recommended',
         ],
@@ -155,24 +160,29 @@ export const configs = {
   react: {
     env,
     extends: [
-      'react-app',
-      'react-app/jest',
       'plugin:smile/js',
       'plugin:react/recommended',
       'plugin:react-hooks/recommended',
       'plugin:react/jsx-runtime',
       'plugin:jsx-a11y/recommended',
+      'plugin:testing-library/react',
       'plugin:prettier/recommended',
     ],
     overrides: [tsOverride, storybookOverride, cypressOverride],
     parserOptions,
-    plugins: ['jsx-a11y', 'react', 'react-hooks'],
+    plugins: ['jsx-a11y', 'react', 'react-hooks', 'react-refresh'],
     rules: {
       ...reactRules,
       ...prettierRules,
     },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
   },
   ts: {
+    extends: ['plugin:smile/js'],
     overrides: [
       {
         ...tsOverride,
@@ -189,7 +199,11 @@ export const configs = {
       cypressOverride,
     ],
     parserOptions: {
-      project: ['./tsconfig.json', './tsconfig.config.json'],
+      project: [
+        './tsconfig.json',
+        './tsconfig.node.json',
+        './tsconfig.app.json',
+      ],
     },
   },
   vue: {
@@ -197,6 +211,7 @@ export const configs = {
     extends: [
       'plugin:smile/js',
       'plugin:vue/vue3-essential',
+      'plugin:testing-library/vue',
       'plugin:prettier/recommended',
     ],
     overrides: [storybookOverride, cypressOverride],
@@ -210,32 +225,13 @@ export const configs = {
   'vue-ts': {
     env,
     extends: [
-      '@vue/eslint-config-typescript',
       'plugin:smile/js',
       'plugin:vue/vue3-essential',
-      'plugin:prettier/recommended',
+      'plugin:testing-library/vue',
+      '@vue/eslint-config-typescript',
+      '@vue/eslint-config-prettier',
     ],
-    overrides: [
-      {
-        extends: [
-          'plugin:prettier/recommended',
-          'plugin:@typescript-eslint/recommended',
-        ],
-        files: ['*.ts', '*.tsx', '*.vue'],
-        parser: 'vue-eslint-parser',
-        parserOptions: vueParserOptions,
-        plugins: ['@typescript-eslint'],
-        rules: {
-          ...tsRules,
-          ...prettierRules,
-          // following rules does not work without type informations in vue
-          '@typescript-eslint/naming-convention': 'off',
-          '@typescript-eslint/prefer-optional-chain': 'off',
-        },
-      },
-      storybookOverride,
-      cypressOverride,
-    ],
+    overrides: [storybookOverride, cypressOverride],
     parserOptions: vueParserOptions,
     plugins: ['vue'],
     rules: {
