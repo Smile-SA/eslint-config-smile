@@ -1,3 +1,9 @@
+#### 0.3.1 (2023-09-12)
+
+##### Bug Fixes
+
+- remove parserOptions.projet option ([955aff8b](https://github.com/Smile-SA/eslint-plugin-smile/commit/955aff8bb39bd8793400a655b42770796af2fb8d))
+
 ### 0.3.0 (2023-09-12)
 
 ##### Chores
