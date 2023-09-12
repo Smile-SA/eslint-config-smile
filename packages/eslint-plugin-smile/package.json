@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-smile",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Smile ESLint rules for js, ts, react, vue, angular, next...",
   "homepage": "https://github.com/Smile-SA/eslint-plugin-smile",
   "repository": {
