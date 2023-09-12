@@ -1,3 +1,9 @@
+#### 0.3.2 (2023-09-12)
+
+##### Bug Fixes
+
+- default rules configuration ([b151136d](https://github.com/Smile-SA/eslint-plugin-smile/commit/b151136d13689b2b67878e9d98f0920c6405d236))
+
 #### 0.3.1 (2023-09-12)
 
 ##### Bug Fixes
