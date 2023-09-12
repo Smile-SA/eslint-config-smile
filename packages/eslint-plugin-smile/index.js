@@ -210,13 +210,6 @@ export const configs = {
       storybookOverride,
       cypressOverride,
     ],
-    parserOptions: {
-      project: [
-        './tsconfig.json',
-        './tsconfig.node.json',
-        './tsconfig.app.json',
-      ],
-    },
   },
   vue: {
     env,

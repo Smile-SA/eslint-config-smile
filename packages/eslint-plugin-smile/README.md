@@ -165,13 +165,16 @@ If you want to use additional rules that require type checking (see https://type
 npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
-And add the following configuration `plugin:smile/ts` (in addition to one of the previous configuration).
+And add the following configuration `plugin:smile/ts` (in addition to your framework configuration) and add the `parserOptions.project` option (see https://typescript-eslint.io/packages/parser/#project).
 
 Example:
 
 ```json
 {
-  "extends": ["plugin:smile/next", "plugin:smile/ts"]
+  "extends": ["plugin:smile/next", "plugin:smile/ts"],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  }
 }
 ```
 
