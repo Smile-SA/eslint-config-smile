@@ -1,5 +1,6 @@
 import angularRules from './rules/angular';
 import cypressRules from './rules/cypress';
+import jestRules from './rules/jest';
 import jsRules from './rules/js';
 import nextRules from './rules/next';
 import prettierRules from './rules/prettier';
@@ -118,6 +119,17 @@ export const configs = {
       storybookOverride,
       cypressOverride,
     ],
+  },
+  jest: {
+    extends: ['plugin:jest/recommended'],
+    overrides: [
+      {
+        files: ['**/__tests__/**/*', '**/*.{spec,test}.*'],
+      },
+    ],
+    parserOptions,
+    plugins: ['jest', 'testing-library'],
+    rules: jestRules,
   },
   js: {
     env,

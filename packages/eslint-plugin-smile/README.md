@@ -14,7 +14,7 @@ npm install eslint-plugin-smile --save-dev
 yarn add eslint-plugin-smile --dev
 ```
 
-## Configuration
+## Framework configuration
 
 ### JavaScript project
 
@@ -113,6 +113,34 @@ And update `.eslintrc.json` with:
 ```
 
 For TypeScript support see [TypeScript configuration](#typescript).
+
+## Tools configurations
+
+### Jest project
+
+If you use Jest in your project you can add the `plugin:smile/jest` configuration:
+
+Install peerDependency:
+
+```bash
+npm i -D eslint-plugin-jest eslint-plugin-testing-library
+```
+
+And update `.eslintrc.json` with:
+
+```json
+{
+  "extends": ["plugin:smile/jest"]
+}
+```
+
+### Cypress
+
+Cypress files will be automatically checked with any framework configuration.
+
+### Storybook
+
+Storybook files will be automatically checked with any framework configuration.
 
 ## TypeScript configuration
 

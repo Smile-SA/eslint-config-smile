@@ -1,8 +1,8 @@
-import type { Component } from "vue";
+import type { Component } from 'vue'
 
-import { createApp } from "vue";
+import { createApp } from 'vue'
 
-import App from "./App.vue";
-import "./assets/main.css";
+import App from './App.vue'
+import './assets/main.css'
 
-createApp(App as Component).mount("#app");
+createApp(App as Component).mount('#app')
