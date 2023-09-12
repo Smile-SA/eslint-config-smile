@@ -195,7 +195,7 @@ const suggestionRules = {
   ],
   'sort-keys': 'error',
   'sort-vars': 'error',
-  'spaced-comment': 'error',
+  'spaced-comment': ['error', 'always', { markers: ['/'] }],
   strict: 'error',
   'symbol-description': 'error',
   // 'vars-on-top': 'error', // useless when no-var is enabled

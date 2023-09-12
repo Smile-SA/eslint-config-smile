@@ -9,13 +9,13 @@ const supportedRules = {
   '@typescript-eslint/naming-convention': [
     'error',
     {
-      format: ['camelCase'],
+      format: ['strictCamelCase', 'StrictPascalCase'],
       leadingUnderscore: 'forbid',
       selector: 'default',
       trailingUnderscore: 'forbid',
     },
     {
-      format: ['camelCase', 'StrictPascalCase'],
+      format: ['strictCamelCase', 'StrictPascalCase'],
       leadingUnderscore: 'allow',
       selector: 'variableLike',
       trailingUnderscore: 'forbid',
