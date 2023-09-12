@@ -1,3 +1,14 @@
+### 0.3.0 (2023-09-12)
+
+##### Chores
+
+- update lerna configuration ([cbcfe240](https://github.com/Smile-SA/eslint-plugin-smile/commit/cbcfe2409ab3cdedc88a30eeee60213fc4c16305))
+- update dependencies and remove create-react-app dependencies ([9efdba4d](https://github.com/Smile-SA/eslint-plugin-smile/commit/9efdba4d7bc8d2e196b1918b39ac676401bed592))
+
+##### New Features
+
+- add jest configuration ([5ec0c244](https://github.com/Smile-SA/eslint-plugin-smile/commit/5ec0c244974f87118244160bca1edac88fe6d2dd))
+
 #### 0.2.2 (2023-06-07)
 
 ##### Chores
