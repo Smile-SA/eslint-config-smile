@@ -27,7 +27,7 @@
     "release:major": "npm run changelog -w packages/eslint-plugin-smile -- -M && npm run bumpAndPublish",
     "release:minor": "npm run changelog -w packages/eslint-plugin-smile -- -m && npm run bumpAndPublish",
     "release:patch": "npm run changelog -w packages/eslint-plugin-smile -- -p && npm run bumpAndPublish",
-    "bumpAndPublish": "npm run prettier && git add packages/eslint-plugin-smile/CHANGELOG.md && git commit -m 'docs: update CHANGELOG files' && lerna publish --no-private"
+    "bumpAndPublish": "npm run build && npm run prettier && git add packages/eslint-plugin-smile/CHANGELOG.md && git commit -m 'docs: update CHANGELOG files' && lerna publish --no-private"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
