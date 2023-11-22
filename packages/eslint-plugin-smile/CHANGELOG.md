@@ -1,3 +1,13 @@
+#### 0.3.3 (2023-11-22)
+
+##### Chores
+
+- update package.json ([092427d9](https://github.com/Smile-SA/eslint-plugin-smile/commit/092427d9560ab00e9231ee22fa9af2f6a94b2ca0))
+
+##### Bug Fixes
+
+- types and jest rules ([#1](https://github.com/Smile-SA/eslint-plugin-smile/pull/1)) ([78f2ee23](https://github.com/Smile-SA/eslint-plugin-smile/commit/78f2ee233efe17182ed38595d980128c466fa6f5))
+
 #### 0.3.2 (2023-09-12)
 
 ##### Bug Fixes
