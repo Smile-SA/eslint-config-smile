@@ -16,12 +16,16 @@ const overrideRules = {
 const supportedRules = {
   '@typescript-eslint/array-type': 'error',
   '@typescript-eslint/ban-tslint-comment': 'error',
+  '@typescript-eslint/ban-types': ['error', { types: { Object: false } }],
   '@typescript-eslint/class-literal-property-style': 'error',
   '@typescript-eslint/consistent-generic-constructors': 'error',
   '@typescript-eslint/consistent-indexed-object-style': 'error',
   '@typescript-eslint/consistent-type-assertions': 'error',
   '@typescript-eslint/consistent-type-definitions': 'error',
-  '@typescript-eslint/consistent-type-imports': 'error',
+  '@typescript-eslint/consistent-type-imports': [
+    'error',
+    { disallowTypeAnnotations: 'false' },
+  ],
   '@typescript-eslint/explicit-function-return-type': [
     'error',
     {
