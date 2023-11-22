@@ -1,3 +1,7 @@
+const overrideRules = {
+  '@typescript-eslint/no-floating-promises': 'off',
+};
+
 const jestRules = {
   'jest/consistent-test-it': 'error',
   'jest/expect-expect': 'error',
@@ -30,6 +34,7 @@ const testingLibraryRules = {
 };
 
 export default {
+  ...overrideRules,
   ...jestRules,
   ...testingLibraryRules,
 };

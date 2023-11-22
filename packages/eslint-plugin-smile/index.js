@@ -125,11 +125,11 @@ export const configs = {
     overrides: [
       {
         files: ['**/__tests__/**/*', '**/*.{spec,test}.*'],
+        rules: jestRules,
       },
     ],
     parserOptions,
     plugins: ['jest', 'testing-library'],
-    rules: jestRules,
   },
   js: {
     env,

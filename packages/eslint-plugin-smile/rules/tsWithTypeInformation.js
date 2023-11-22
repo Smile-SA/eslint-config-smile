@@ -52,7 +52,7 @@ const supportedRules = {
       trailingUnderscore: 'forbid',
     },
     {
-      format: ['StrictPascalCase'],
+      format: ['StrictPascalCase', 'UPPER_CASE'],
       leadingUnderscore: 'forbid',
       selector: 'enumMember',
       trailingUnderscore: 'forbid',
