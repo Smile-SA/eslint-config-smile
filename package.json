@@ -14,6 +14,7 @@
     "eslint:js": "npm run eslint -w examples/js",
     "eslint:next-js": "npm run eslint -w examples/next-js",
     "eslint:next-ts": "npm run eslint -w examples/next-ts",
+    "eslint:nuxt": "npm run eslint -w examples/nuxt",
     "eslint:react-js": "npm run eslint -w examples/react-js",
     "eslint:react-ts": "npm run eslint -w examples/react-ts",
     "eslint:storybook-js": "npm run eslint -w examples/storybook-js",
