@@ -114,6 +114,24 @@ And update `.eslintrc.json` with:
 
 For TypeScript support see [TypeScript configuration](#typescript).
 
+### Nuxt project
+
+Install peerDependency:
+
+```bash
+npm i -D @nuxt/eslint-config eslint-plugin-nuxt
+```
+
+And update `.eslintrc.json` with:
+
+```json
+{
+  "extends": ["plugin:smile/nuxt"]
+}
+```
+
+For TypeScript support see [TypeScript configuration](#typescript).
+
 ## Tools configurations
 
 ### Jest project
@@ -156,6 +174,7 @@ TypeScript is already supported in following configurations:
 - `plugin:smile/react`
 - `plugin:smile/angular`
 - `plugin:smile/next`
+- `plugin:smile/nuxt`
 
 For Vue use `plugin:smile/vue-ts` instead.
 
