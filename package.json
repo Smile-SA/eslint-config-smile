@@ -23,6 +23,7 @@
     "eslint:vue-js": "npm run eslint -w examples/vue-js",
     "eslint:vue-ts": "npm run eslint -w examples/vue-ts",
     "prettier": "prettier --write --ignore-unknown --ignore-path .gitignore .",
+    "prettier:ci": "prettier --check --ignore-unknown --ignore-path .gitignore .",
     "prepare": "husky install",
     "preversion": "npm run eslint",
     "release:major": "npm run changelog -w packages/eslint-plugin-smile -- -M && npm run bumpAndPublish",
