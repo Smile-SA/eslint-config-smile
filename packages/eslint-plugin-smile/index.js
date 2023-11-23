@@ -170,6 +170,19 @@ export const configs = {
       ...prettierRules,
     },
   },
+  nuxt: {
+    extends: [
+      'plugin:smile/vue',
+      '@nuxt/eslint-config',
+      'plugin:nuxt/recommended',
+      'plugin:prettier/recommended',
+    ],
+    overrides: [tsOverride, storybookOverride, cypressOverride],
+    rules: {
+      ...nuxtRules,
+      ...prettierRules,
+    },
+  },
   react: {
     env,
     extends: [
@@ -211,19 +224,6 @@ export const configs = {
       storybookOverride,
       cypressOverride,
     ],
-  },
-  nuxt: {
-    extends: [
-      'plugin:smile/vue',
-      '@nuxt/eslint-config',
-      'plugin:nuxt/recommended',
-      'plugin:prettier/recommended',
-    ],
-    overrides: [tsOverride, storybookOverride, cypressOverride],
-    rules: {
-      ...nuxtRules,
-      ...prettierRules,
-    },
   },
   vue: {
     env,

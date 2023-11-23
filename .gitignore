@@ -3,6 +3,7 @@ tmp
 out-tsc
 bazel-out
 .next
+.nuxt
 out
 build
 dist
