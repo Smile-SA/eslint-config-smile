@@ -1,3 +1,22 @@
+### 0.4.0 (2023-11-23)
+
+##### Chores
+
+- add CI ([cc2fd4a4](https://github.com/Smile-SA/eslint-plugin-smile/commit/cc2fd4a424519be5edbad6093b218ce884882165))
+
+##### Documentation Changes
+
+- add contributing doc ([0c3a2113](https://github.com/Smile-SA/eslint-plugin-smile/commit/0c3a211303649380aeff9f261b56c33b8ba1a2e0))
+- add nuxt configuration ([e82edf73](https://github.com/Smile-SA/eslint-plugin-smile/commit/e82edf734066dc0a622322aff88b3b1ef781e504))
+
+##### New Features
+
+- adding nuxt recommanded rules ([d252f19a](https://github.com/Smile-SA/eslint-plugin-smile/commit/d252f19a5667b8318224e54c2c828dcb1e625827))
+
+##### Bug Fixes
+
+- lint and format ([fa37041c](https://github.com/Smile-SA/eslint-plugin-smile/commit/fa37041cd4fa1342b8c878c86ff14470e06b1188))
+
 #### 0.3.3 (2023-11-22)
 
 ##### Chores
