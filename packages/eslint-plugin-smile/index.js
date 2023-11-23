@@ -3,6 +3,7 @@ import cypressRules from './rules/cypress';
 import jestRules from './rules/jest';
 import jsRules from './rules/js';
 import nextRules from './rules/next';
+import nuxtRules from './rules/nuxt';
 import prettierRules from './rules/prettier';
 import reactRules from './rules/react';
 import storybookRules from './rules/storybook';
@@ -210,6 +211,19 @@ export const configs = {
       storybookOverride,
       cypressOverride,
     ],
+  },
+  nuxt: {
+    extends: [
+      'plugin:smile/vue',
+      '@nuxt/eslint-config',
+      'plugin:nuxt/recommended',
+      'plugin:prettier/recommended',
+    ],
+    overrides: [tsOverride, storybookOverride, cypressOverride],
+    rules: {
+      ...nuxtRules,
+      ...prettierRules,
+    },
   },
   vue: {
     env,
