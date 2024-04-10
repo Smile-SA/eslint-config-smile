@@ -21,8 +21,8 @@
     "@storybook/manager-webpack4": "^6.5.16",
     "@storybook/testing-library": "^0.2.0",
     "babel-loader": "^9.1.3",
-    "eslint": "^8.49.0",
-    "eslint-plugin-smile": "file:../../packages/eslint-plugin-smile"
+    "eslint": "^8.57.0",
+    "eslint-plugin-smile": "*"
   },
   "dependencies": {}
 }

@@ -12,12 +12,12 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.3.3",
+    "@rushstack/eslint-patch": "^1.10.1",
     "@vitejs/plugin-vue": "^4.3.4",
-    "@vue/eslint-config-prettier": "^8.0.0",
-    "eslint": "^8.49.0",
-    "eslint-plugin-smile": "file:../../packages/eslint-plugin-smile",
-    "eslint-plugin-vue": "^9.17.0",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-smile": "*",
+    "eslint-plugin-vue": "^9.24.1",
     "prettier": "^3.0.3",
     "vite": "^4.4.9"
   }

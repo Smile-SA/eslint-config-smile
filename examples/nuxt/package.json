@@ -11,13 +11,13 @@
     "eslint": "eslint . --fix"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "0.2.0",
+    "@nuxt/eslint-config": "0.3.5",
     "@nuxt/devtools": "latest",
-    "@typescript-eslint/eslint-plugin": "^6.6.0",
-    "@typescript-eslint/parser": "^6.6.0",
-    "eslint": "^8.49.0",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-smile": "file:../../packages/eslint-plugin-smile",
+    "eslint-plugin-smile": "*",
     "nuxt": "^3.8.1",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"

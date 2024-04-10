@@ -9,14 +9,13 @@
     "eslint": "next lint --fix"
   },
   "dependencies": {
-    "@next/font": "^13.4.19",
-    "next": "^13.4.19",
+    "next": "^14.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "eslint": "^8.49.0",
-    "eslint-config-next": "^13.4.19",
-    "eslint-plugin-smile": "file:../../packages/eslint-plugin-smile"
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.1.4",
+    "eslint-plugin-smile": "*"
   }
 }
