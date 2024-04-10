@@ -1,3 +1,9 @@
+### 0.5.0 (2024-04-10)
+
+##### New Features
+
+- update deps ([c3195364](https://github.com/Smile-SA/eslint-plugin-smile/commit/c31953646d02b624501796d85ff39bb0eb6f2f4f))
+
 ### 0.4.0 (2023-11-23)
 
 ##### Chores
