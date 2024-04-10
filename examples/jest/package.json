@@ -10,9 +10,9 @@
     "node": ">=10"
   },
   "devDependencies": {
-    "eslint": "^8.49.0",
-    "eslint-plugin-jest": "^27.2.3",
-    "eslint-plugin-smile": "file:../../packages/eslint-plugin-smile",
+    "eslint": "^8.57.0",
+    "eslint-plugin-jest": "^28.2.0",
+    "eslint-plugin-smile": "*",
     "eslint-plugin-testing-library": "^6.0.1",
     "jest": "^29.6.4"
   }

@@ -15,11 +15,11 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react-swc": "^3.3.2",
-    "eslint": "^8.49.0",
-    "eslint-plugin-react": "^7.33.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "eslint-plugin-smile": "file:../../packages/eslint-plugin-smile",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "eslint-plugin-smile": "*",
     "vite": "^4.4.9"
   }
 }
